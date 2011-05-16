@@ -35,7 +35,7 @@ stationinfo = file.def_var("station_info","int",[station_dim])
 stationinfo.put_att("long_name","station info")
 
 stationname = file.def_var("station_name","char",[name_dim, station_dim])
-stationname.put_att("cf_role", "station_id")
+stationname.put_att("cf_role", "timeseries_id")
 stationname.put_att("long_name", "station name")
 
 profile = file.def_var("profile","int",[profile_dim])
