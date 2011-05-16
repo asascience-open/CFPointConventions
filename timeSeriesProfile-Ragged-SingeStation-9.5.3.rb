@@ -4,10 +4,15 @@
 require 'rubygems'
 require 'narray'
 require 'numru/netcdf'
+require 'fileutils'
 
 include NumRu
 
-meta_name = File.basename(__FILE__).gsub(".rb",".nc")
+base_name = File.basename(__FILE__).gsub(".rb","")
+meta_name = base_name + "/" + base_name + ".nc"
+cdl_name = base_name + "/" + base_name + ".cdl"
+FileUtils.mkdir(base_name) unless File.exists?(base_name)
+
 file = NetCDF.create(meta_name)
 file.put_att("CF:featureType","timeSeriesProfile")
 
@@ -59,7 +64,7 @@ temp = file.def_var("temperature","float",[obs_dim])
 temp.put_att("standard_name","sea_water_temperature")
 temp.put_att("long_name","Water Temperature")
 temp.put_att("units","Celsius")
-temp.put_att("coordinates", "time height lat lon")
+temp.put_att("coordinates", "time lat lon height")
 
 # Stop the definitions, lets write some data
 file.enddef
@@ -85,5 +90,5 @@ temp.put(temp_data)
 
 
 file.close
-`ncdump -h #{meta_name} > #{meta_name.gsub(".nc",".cdl")}`
+`ncdump -h #{meta_name} > #{cdl_name}`
 

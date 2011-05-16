@@ -1,8 +1,8 @@
-netcdf timeSeriesProfile-Multidimensional-MultipeStations-9.5.1 {
+netcdf timeSeriesProfile-Ragged-MultipeStations-9.5.3 {
 dimensions:
 	station = 2 ;
 	profile = 4 ;
-	z = 30 ;
+	obs = 12 ;
 	name_strlen = 50 ;
 variables:
 	double lat(station) ;
@@ -18,18 +18,29 @@ variables:
 	char station_name(station, name_strlen) ;
 		station_name:cf_role = "timeseries_id" ;
 		station_name:long_name = "station name" ;
-	double alt(station, profile, z) ;
-		alt:units = "m" ;
-		alt:positive = "up" ;
-		alt:axis = "Z" ;
-	int time(station, profile) ;
+	int profile(profile) ;
+		profile:cf_role = "profile_id" ;
+	int time(profile) ;
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
-	double temperature(station, profile, z) ;
+	int station_index(profile) ;
+		station_index:long_name = "the station this profile is associated with" ;
+		station_index:instance_dimension = "station" ;
+	int row_size(profile) ;
+		row_size:long_name = "number of obs in this profile" ;
+		row_size:sample_dimension = "obs" ;
+	double height(obs) ;
+		height:long_name = "height above sea surface" ;
+		height:standard_name = "height" ;
+		height:units = "meters" ;
+		height:axis = "Z" ;
+		height:positive = "up" ;
+	double temperature(obs) ;
+		temperature:standard_name = "sea_water_temperature" ;
 		temperature:long_name = "Water Temperature" ;
 		temperature:units = "Celsius" ;
-		temperature:coordinates = "time alt lat lon" ;
+		temperature:coordinates = "time lat lon height" ;
 
 // global attributes:
 		:CF\:featureType = "timeSeriesProfile" ;
