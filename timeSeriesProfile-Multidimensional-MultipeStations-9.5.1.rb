@@ -75,5 +75,5 @@ temp.put(data )
 
 
 file.close
-print `ncdump -h #{meta_name}`
+`ncdump -h #{meta_name} > #{meta_name.gsub(".nc",".cdl")}`
 
