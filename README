@@ -1,3 +1,37 @@
 Templates of the CF PointObservationConventions
 
 See: https://cf-pcmdi.llnl.gov/trac/wiki/PointObservationConventions
+
+To get started:
+
+* Install Ruby 1.9
+* Download and Install narray:
+  - wget https://github.com/masa16/narray/tarball/0.6.0.1
+  - tar zxvf 0.6.0.1
+  - cd masa16-narray-4429bdf
+  - ruby extconf.rb
+  - make
+  - make install
+  
+* Download and Install narray_miss
+  - wget http://ruby.gfd-dennou.org/products/narray_miss/narray_miss-1.2.2.tar.gz
+  - tar zxvf narray_miss-1.2.2.tar.gz
+  - cd narray_miss-1.2.2
+  - ruby setup.rb
+  
+* Download and Install Ruby-NetCDF
+  - wget http://ruby.gfd-dennou.org/products/ruby-netcdf/ruby-netcdf-0.6.5.tar.gz
+  - tar zxvf ruby-netcdf-0.6.5.tar.gz
+  - cd ruby-netcdf-0.6.5
+  - ruby extconf.rb
+  
+  You may get some errors and need to point Ruby to the NArray and/or Netcdf headers
+  The instructions are provided if it fails.
+  
+  - make
+  - make install  
+
+
+* Run the generators
+  - ./runScripts
+
