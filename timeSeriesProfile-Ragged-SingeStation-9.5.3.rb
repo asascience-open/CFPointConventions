@@ -1,6 +1,7 @@
 #! ruby
 
 require 'numru/netcdf'
+require 'fileutils'
 
 include NumRu
 
