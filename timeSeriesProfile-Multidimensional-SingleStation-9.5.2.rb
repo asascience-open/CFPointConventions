@@ -1,10 +1,6 @@
 #! ruby
 
-# All of these are required for ruby < 1.9
-require 'rubygems'
-require 'narray'
 require 'numru/netcdf'
-require 'fileutils'
 
 include NumRu
 
@@ -63,8 +59,7 @@ lon.put([-76.5])
 stationinfo.put([0])
 
 blank = Array.new(name)
-# the [0] in [0].ord makes this compatible with Ruby < 1.9
-name1 = ("Station1".split(//).map!{|d|d[0].ord} + blank)[0..name-1]
+name1 = ("Station1".split(//).map!{|d|d.ord} + blank)[0..name-1]
 
 stationname.put([name1])
 
