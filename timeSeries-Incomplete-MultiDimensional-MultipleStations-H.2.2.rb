@@ -7,6 +7,7 @@ include NumRu
 
 base_name = File.basename(__FILE__).gsub(".rb","")
 meta_name = base_name + "/" + base_name + ".nc"
+ncml_name = base_name + "/" + base_name + ".ncml"
 cdl_name = base_name + "/" + base_name + ".cdl"
 FileUtils.mkdir(base_name) unless File.exists?(base_name)
 
@@ -125,4 +126,4 @@ humi.put(NArray.int(o-8).random!(90), "start" => [0,9], "end" => [o-9,9])
 
 file.close
 `ncdump -h #{meta_name} > #{cdl_name}`
-
+`ncdump -x -h #{meta_name} > #{ncml_name}`
