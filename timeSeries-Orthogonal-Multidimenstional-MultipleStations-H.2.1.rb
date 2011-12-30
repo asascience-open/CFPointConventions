@@ -11,7 +11,7 @@ cdl_name = base_name + "/" + base_name + ".cdl"
 FileUtils.mkdir(base_name) unless File.exists?(base_name)
 
 file = NetCDF.create(meta_name)
-file.put_att("CF:featureType","timeSeries")
+file.put_att("featureType","timeSeries")
 
 s = 10
 t = 0  #UNLIMITED

@@ -1,6 +1,8 @@
 Templates of the CF PointObservationConventions
 
-See: https://cf-pcmdi.llnl.gov/trac/wiki/PointObservationConventions
+Outputs in NetCDF, CDL, and NcML
+
+See: http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html#appendix-examples-discrete-geometries
 
 To get started:
 

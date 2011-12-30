@@ -1,4 +1,4 @@
-netcdf point-9.1.1 {
+netcdf point-H.1 {
 dimensions:
 	obs = 100 ;
 variables:
@@ -31,5 +31,5 @@ variables:
 		humidity:coordinates = "time lat lon alt" ;
 
 // global attributes:
-		:CF\:featureType = "point" ;
+		:featureType = "point" ;
 }
