@@ -13,6 +13,7 @@ FileUtils.mkdir(base_name) unless File.exists?(base_name)
 
 file = NetCDF.create(meta_name)
 file.put_att("featureType","profile")
+file.put_att("Conventions","CF-1.6")
 
 z = 42
 

@@ -13,6 +13,7 @@ FileUtils.mkdir(base_name) unless File.exists?(base_name)
 
 file = NetCDF.create(meta_name)
 file.put_att("featureType","timeSeriesProfile")
+file.put_att("Conventions","CF-1.6")
 
 s = 2
 p = 4
@@ -41,6 +42,8 @@ stationname.put_att("cf_role", "timeseries_id")
 stationname.put_att("long_name", "station name")
 
 alt = file.def_var("alt","float",[z_dim, profile_dim, station_dim])
+alt.put_att("standard_name","altitude")
+alt.put_att("long_name", "height above mean sea level")
 alt.put_att("units","m")
 alt.put_att("positive","up")
 alt.put_att("axis","Z")
@@ -52,6 +55,7 @@ time.put_att("units","seconds since 1990-01-01 00:00:00")
 
 temp = file.def_var("temperature","float",[z_dim, profile_dim, station_dim])
 temp.put_att("long_name","Water Temperature")
+temp.put_att("standard_name","sea_water_temperature")
 temp.put_att("units","Celsius")
 temp.put_att("coordinates", "time lat lon alt")
 
@@ -73,7 +77,7 @@ time.put( NArray.int(s*p).indgen!*3600)
 alt.put(NArray.float(s*p*z).indgen!*2.5)
 
 data = NArray.float(s,p,z).indgen!*0.1
-temp.put(data )
+temp.put(data)
 
 
 file.close

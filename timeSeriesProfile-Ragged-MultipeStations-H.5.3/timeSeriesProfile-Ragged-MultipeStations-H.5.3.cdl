@@ -44,4 +44,5 @@ variables:
 
 // global attributes:
 		:featureType = "timeSeriesProfile" ;
+		:Conventions = "CF-1.6" ;
 }

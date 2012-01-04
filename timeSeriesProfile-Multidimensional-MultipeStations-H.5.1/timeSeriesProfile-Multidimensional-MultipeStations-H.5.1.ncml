@@ -5,6 +5,7 @@
   <dimension name="z" length="30" />
   <dimension name="name_strlen" length="50" />
   <attribute name="featureType" value="timeSeriesProfile" />
+  <attribute name="Conventions" value="CF-1.6" />
   <variable name="lat" shape="station" type="double">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />
@@ -23,6 +24,8 @@
     <attribute name="long_name" value="station name" />
   </variable>
   <variable name="alt" shape="station profile z" type="double">
+    <attribute name="standard_name" value="altitude" />
+    <attribute name="long_name" value="height above mean sea level" />
     <attribute name="units" value="m" />
     <attribute name="positive" value="up" />
     <attribute name="axis" value="Z" />
@@ -34,6 +37,7 @@
   </variable>
   <variable name="temperature" shape="station profile z" type="double">
     <attribute name="long_name" value="Water Temperature" />
+    <attribute name="standard_name" value="sea_water_temperature" />
     <attribute name="units" value="Celsius" />
     <attribute name="coordinates" value="time lat lon alt" />
   </variable>

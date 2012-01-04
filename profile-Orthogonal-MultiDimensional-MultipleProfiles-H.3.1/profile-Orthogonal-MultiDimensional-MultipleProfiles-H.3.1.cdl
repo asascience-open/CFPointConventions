@@ -35,4 +35,5 @@ variables:
 
 // global attributes:
 		:featureType = "profile" ;
+		:Conventions = "CF-1.6" ;
 }

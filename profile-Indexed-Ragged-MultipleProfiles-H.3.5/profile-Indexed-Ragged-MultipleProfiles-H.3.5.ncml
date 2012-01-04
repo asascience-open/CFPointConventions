@@ -3,6 +3,7 @@
   <dimension name="obs" length="100" isUnlimited="true" />
   <dimension name="profile" length="6" />
   <attribute name="featureType" value="profile" />
+  <attribute name="Conventions" value="CF-1.6" />
   <variable name="lat" shape="profile" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

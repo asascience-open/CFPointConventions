@@ -32,4 +32,5 @@ variables:
 
 // global attributes:
 		:featureType = "point" ;
+		:Conventions = "CF-1.6" ;
 }

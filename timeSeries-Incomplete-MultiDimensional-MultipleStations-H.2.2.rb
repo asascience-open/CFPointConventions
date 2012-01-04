@@ -13,6 +13,7 @@ FileUtils.mkdir(base_name) unless File.exists?(base_name)
 
 file = NetCDF.create(meta_name)
 file.put_att("featureType","timeSeries")
+file.put_att("Conventions","CF-1.6")
 
 s = 0  #UNLIMITED
 o = 20

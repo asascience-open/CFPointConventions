@@ -3,6 +3,7 @@
   <dimension name="profile" length="142" />
   <dimension name="z" length="42" />
   <attribute name="featureType" value="profile" />
+  <attribute name="Conventions" value="CF-1.6" />
   <variable name="lat" shape="profile" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

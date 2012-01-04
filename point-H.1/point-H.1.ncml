@@ -2,6 +2,7 @@
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="point-H.1/point-H.1.nc">
   <dimension name="obs" length="100" />
   <attribute name="featureType" value="point" />
+  <attribute name="Conventions" value="CF-1.6" />
   <variable name="lat" shape="obs" type="double">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="latitude of the observation" />

@@ -19,6 +19,8 @@ variables:
 		station_name:cf_role = "timeseries_id" ;
 		station_name:long_name = "station name" ;
 	double alt(station, profile, z) ;
+		alt:standard_name = "altitude" ;
+		alt:long_name = "height above mean sea level" ;
 		alt:units = "m" ;
 		alt:positive = "up" ;
 		alt:axis = "Z" ;
@@ -28,9 +30,11 @@ variables:
 		time:units = "seconds since 1990-01-01 00:00:00" ;
 	double temperature(station, profile, z) ;
 		temperature:long_name = "Water Temperature" ;
+		temperature:standard_name = "sea_water_temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon alt" ;
 
 // global attributes:
 		:featureType = "timeSeriesProfile" ;
+		:Conventions = "CF-1.6" ;
 }
