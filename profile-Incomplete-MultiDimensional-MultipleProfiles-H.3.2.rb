@@ -19,7 +19,7 @@ p = 142
 z = 42
 
 profile_dim = file.def_dim("profile",p)
-z_dim = file.def_dim("z",z)
+z_dim = file.def_dim("alt",z)
 
 lat = file.def_var("lat","sfloat",[profile_dim])
 lat.put_att("units","degrees_north")
@@ -47,15 +47,15 @@ alt.put_att("positive","up")
 alt.put_att("axis","Z")
 	
 temp = file.def_var("temperature","sfloat",[z_dim, profile_dim])
-temp.put_att("long_name","Water Temperature")
+temp.put_att("long_name","Air Temperature")
 temp.put_att("units","Celsius")
-temp.put_att("coordinates", "time lat lon z")
+temp.put_att("coordinates", "time lat lon alt")
 
 humi = file.def_var("humidity","sfloat",[z_dim, profile_dim])
 humi.put_att("long_name","Humidity")
 humi.put_att("standard_name","specific_humidity")
 humi.put_att("units","Percent")
-humi.put_att("coordinates", "time lat lon z")
+humi.put_att("coordinates", "time lat lon alt")
 
 # Stop the definitions, lets write some data
 file.enddef

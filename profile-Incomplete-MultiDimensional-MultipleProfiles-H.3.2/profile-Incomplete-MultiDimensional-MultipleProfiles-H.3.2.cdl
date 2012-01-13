@@ -1,7 +1,7 @@
 netcdf profile-Incomplete-MultiDimensional-MultipleProfiles-H.3.2 {
 dimensions:
 	profile = 142 ;
-	z = 42 ;
+	alt = 42 ;
 variables:
 	float lat(profile) ;
 		lat:units = "degrees_north" ;
@@ -17,21 +17,21 @@ variables:
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
-	float alt(profile, z) ;
+	float alt(profile, alt) ;
 		alt:units = "m" ;
 		alt:standard_name = "altitude" ;
 		alt:long_name = "height above mean sea level" ;
 		alt:positive = "up" ;
 		alt:axis = "Z" ;
-	float temperature(profile, z) ;
-		temperature:long_name = "Water Temperature" ;
+	float temperature(profile, alt) ;
+		temperature:long_name = "Air Temperature" ;
 		temperature:units = "Celsius" ;
-		temperature:coordinates = "time lat lon z" ;
-	float humidity(profile, z) ;
+		temperature:coordinates = "time lat lon alt" ;
+	float humidity(profile, alt) ;
 		humidity:long_name = "Humidity" ;
 		humidity:standard_name = "specific_humidity" ;
 		humidity:units = "Percent" ;
-		humidity:coordinates = "time lat lon z" ;
+		humidity:coordinates = "time lat lon alt" ;
 
 // global attributes:
 		:featureType = "profile" ;
