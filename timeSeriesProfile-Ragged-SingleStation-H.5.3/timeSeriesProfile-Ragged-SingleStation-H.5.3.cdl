@@ -1,4 +1,4 @@
-netcdf timeSeriesProfile-Ragged-SingeStation-H.5.3 {
+netcdf timeSeriesProfile-Ragged-SingleStation-H.5.3 {
 dimensions:
 	profile = 4 ;
 	obs = 10 ;
