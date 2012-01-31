@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for f in *.rb
+find . -name *.rb | while read f;
 do
   ruby $f
 done
