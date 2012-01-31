@@ -60,6 +60,10 @@ humi.put_att("coordinates", "time lat lon alt")
 # Stop the definitions, lets write some data
 file.enddef
 
+# Uniquely identifiying values for each profile.
+# Just iterates by 1 (0,1,2,3, ... ,p)
+profile.put(NArray.int(p).indgen!)
+
 lat.put(NArray.int(p).random!(180))
 lon.put(NArray.int(p).random!(180))
 time.put(NArray.int(p).indgen!*3600)

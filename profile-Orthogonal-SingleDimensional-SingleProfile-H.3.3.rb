@@ -58,6 +58,9 @@ humi.put_att("coordinates", "time lat lon z")
 # Stop the definitions, lets write some data
 file.enddef
 
+# Uniquely identifiying value for this profile.
+profile.put(0)
+
 lat.put([37.5])
 lon.put([-76.5])
 time.put(NArray.int(1).indgen!*3600)
