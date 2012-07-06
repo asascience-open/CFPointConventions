@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="./trajectory/trajectory-Contiguous-Ragged-MultipleTrajectories-H.4.3/trajectory-Contiguous-Ragged-MultipleTrajectories-H.4.3.nc">
-  <dimension name="obs" length="163" isUnlimited="true" />
+  <dimension name="obs" length="166" isUnlimited="true" />
   <dimension name="trajectory" length="6" />
   <dimension name="name_strlen" length="50" />
-  <attribute name="featureType" value="trajectory" />
   <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="featureType" value="trajectory" />
   <variable name="lat" shape="obs" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

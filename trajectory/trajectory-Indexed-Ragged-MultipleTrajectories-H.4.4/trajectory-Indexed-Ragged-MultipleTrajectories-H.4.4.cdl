@@ -1,6 +1,6 @@
 netcdf trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4 {
 dimensions:
-	obs = UNLIMITED ; // (186 currently)
+	obs = UNLIMITED ; // (179 currently)
 	trajectory = 10 ;
 	name_strlen = 50 ;
 variables:
@@ -42,6 +42,6 @@ variables:
 		humidity:coordinates = "time lat lon z" ;
 
 // global attributes:
-		:featureType = "trajectory" ;
 		:Conventions = "CF-1.6" ;
+		:featureType = "trajectory" ;
 }

@@ -31,6 +31,6 @@ variables:
 		temperature:coordinates = "time lat lon alt" ;
 
 // global attributes:
-		:featureType = "timeSeriesProfile" ;
 		:Conventions = "CF-1.6" ;
+		:featureType = "timeSeriesProfile" ;
 }

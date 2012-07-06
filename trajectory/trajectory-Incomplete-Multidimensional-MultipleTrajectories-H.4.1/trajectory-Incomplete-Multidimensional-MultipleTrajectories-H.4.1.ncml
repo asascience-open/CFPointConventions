@@ -3,8 +3,8 @@
   <dimension name="obs" length="50" />
   <dimension name="trajectory" length="4" />
   <dimension name="name_strlen" length="50" />
-  <attribute name="featureType" value="trajectory" />
   <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="featureType" value="trajectory" />
   <variable name="lat" shape="trajectory obs" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

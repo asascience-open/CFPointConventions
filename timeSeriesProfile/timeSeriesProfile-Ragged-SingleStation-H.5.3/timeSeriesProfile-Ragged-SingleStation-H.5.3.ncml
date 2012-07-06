@@ -3,8 +3,8 @@
   <dimension name="profile" length="4" />
   <dimension name="obs" length="10" />
   <dimension name="name_strlen" length="50" />
-  <attribute name="featureType" value="timeSeriesProfile" />
   <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="featureType" value="timeSeriesProfile" />
   <variable name="lat" type="double">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

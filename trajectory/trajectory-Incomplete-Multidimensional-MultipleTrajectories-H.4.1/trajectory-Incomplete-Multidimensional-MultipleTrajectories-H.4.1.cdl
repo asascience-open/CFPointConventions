@@ -39,6 +39,6 @@ variables:
 		humidity:coordinates = "time lat lon z" ;
 
 // global attributes:
-		:featureType = "trajectory" ;
 		:Conventions = "CF-1.6" ;
+		:featureType = "trajectory" ;
 }
