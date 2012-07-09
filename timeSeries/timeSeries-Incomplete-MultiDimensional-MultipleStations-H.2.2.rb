@@ -1,20 +1,17 @@
 #! ruby
 
 require 'numru/netcdf'
-require 'fileutils'
+require_relative '../utils'
 
 include NumRu
 
-base_name = File.basename(__FILE__).gsub(".rb","")
-root_path = File.dirname(__FILE__) + "/" + base_name
-meta_name = root_path + "/" + base_name + ".nc"
-ncml_name = root_path + "/" + base_name + ".ncml"
-cdl_name = root_path + "/" + base_name + ".cdl"
-FileUtils.mkdir(root_path) unless File.exists?(root_path)
+readme = \
+"
+"
 
-file = NetCDF.create(meta_name)
+nc = CFNetCDF.new(__FILE__, readme)
+file = nc.netcdf_file
 file.put_att("featureType","timeSeries")
-file.put_att("Conventions","CF-1.6")
 
 s = 0  #UNLIMITED
 o = 20
@@ -127,5 +124,4 @@ humi.put(NArray.int(o-8).random!(90), "start" => [0,9], "end" => [o-9,9])
 
 
 file.close
-`ncdump -h #{meta_name} > #{cdl_name}`
-`ncdump -x -h #{meta_name} > #{ncml_name}`
+nc.create_output
