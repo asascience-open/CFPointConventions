@@ -46,6 +46,6 @@ variables:
 		humidity:_FillValie = -999.9 ;
 
 // global attributes:
-		:featureType = "timeSeries" ;
 		:Conventions = "CF-1.6" ;
+		:featureType = "timeSeries" ;
 }

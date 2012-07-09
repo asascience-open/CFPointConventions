@@ -1,6 +1,6 @@
 netcdf trajectory-Contiguous-Ragged-MultipleTrajectories-H.4.3 {
 dimensions:
-	obs = UNLIMITED ; // (166 currently)
+	obs = UNLIMITED ; // (189 currently)
 	trajectory = 6 ;
 	name_strlen = 50 ;
 variables:

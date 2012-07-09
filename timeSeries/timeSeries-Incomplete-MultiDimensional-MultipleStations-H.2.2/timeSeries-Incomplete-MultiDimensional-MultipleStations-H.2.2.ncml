@@ -3,8 +3,8 @@
   <dimension name="station" length="10" isUnlimited="true" />
   <dimension name="obs" length="20" />
   <dimension name="name_strlen" length="50" />
-  <attribute name="featureType" value="timeSeries" />
   <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="featureType" value="timeSeries" />
   <variable name="lat" shape="station" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />

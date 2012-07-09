@@ -1,6 +1,6 @@
 netcdf trajectoryProfile-Ragged-MultipleTrajectories-H.6.3 {
 dimensions:
-	obs = UNLIMITED ; // (564 currently)
+	obs = UNLIMITED ; // (591 currently)
 	profile = 20 ;
 	trajectory = 5 ;
 variables:

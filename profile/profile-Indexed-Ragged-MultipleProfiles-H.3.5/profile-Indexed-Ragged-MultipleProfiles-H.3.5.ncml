@@ -2,8 +2,8 @@
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="./profile/profile-Indexed-Ragged-MultipleProfiles-H.3.5/profile-Indexed-Ragged-MultipleProfiles-H.3.5.nc">
   <dimension name="obs" length="100" isUnlimited="true" />
   <dimension name="profile" length="6" />
-  <attribute name="featureType" value="profile" />
   <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="featureType" value="profile" />
   <variable name="lat" shape="profile" type="float">
     <attribute name="units" value="degrees_north" />
     <attribute name="long_name" value="station latitude" />
