@@ -45,23 +45,25 @@ time = file.def_var("time","int",[profile_dim])
 time.put_att("long_name","time")
 time.put_att("standard_name","time")
 time.put_att("units","seconds since 1990-01-01 00:00:00")
+time.put_att("missing_value",-999,"int")
 
 rowsize = file.def_var("row_size","int",[profile_dim])
 rowsize.put_att("long_name", "number of obs in this profile")
 rowsize.put_att("sample_dimension", "obs")
 
-height = file.def_var("height","float",[obs_dim])
+height = file.def_var("height","sfloat",[obs_dim])
 height.put_att("long_name","height above sea surface")
 height.put_att("standard_name","height")
 height.put_att("units","meters")
 height.put_att("axis","Z")
 height.put_att("positive","up")
 
-temp = file.def_var("temperature","float",[obs_dim])
+temp = file.def_var("temperature","sfloat",[obs_dim])
 temp.put_att("standard_name","sea_water_temperature")
 temp.put_att("long_name","Water Temperature")
 temp.put_att("units","Celsius")
 temp.put_att("coordinates", "time lat lon height")
+temp.put_att("missing_value",-999.9,"sfloat")
 
 # Stop the definitions, lets write some data
 file.enddef

@@ -23,20 +23,22 @@ variables:
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
+		time:missing_value = -999 ;
 	int row_size(profile) ;
 		row_size:long_name = "number of obs in this profile" ;
 		row_size:sample_dimension = "obs" ;
-	double height(obs) ;
+	float height(obs) ;
 		height:long_name = "height above sea surface" ;
 		height:standard_name = "height" ;
 		height:units = "meters" ;
 		height:axis = "Z" ;
 		height:positive = "up" ;
-	double temperature(obs) ;
+	float temperature(obs) ;
 		temperature:standard_name = "sea_water_temperature" ;
 		temperature:long_name = "Water Temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon height" ;
+		temperature:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;

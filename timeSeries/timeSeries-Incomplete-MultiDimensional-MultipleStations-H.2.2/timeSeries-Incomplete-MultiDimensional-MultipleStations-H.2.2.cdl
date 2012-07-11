@@ -31,19 +31,19 @@ variables:
 		time:long_name = "time of measurement" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
-		time:_FillValie = -999.9 ;
+		time:missing_value = -999 ;
 	float temperature(station, obs) ;
 		temperature:long_name = "Air Temperature" ;
 		temperature:standard_name = "air_temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon alt" ;
-		temperature:_FillValie = -999.9 ;
+		temperature:missing_value = -999.9f ;
 	float humidity(station, obs) ;
 		humidity:long_name = "Humidity" ;
 		humidity:standard_name = "specific_humidity" ;
 		humidity:units = "Percent" ;
 		humidity:coordinates = "time lat lon alt" ;
-		humidity:_FillValie = -999.9 ;
+		humidity:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;

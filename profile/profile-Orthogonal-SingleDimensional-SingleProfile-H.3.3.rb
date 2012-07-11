@@ -46,12 +46,14 @@ temp = file.def_var("temperature","sfloat",[z_dim])
 temp.put_att("long_name","Water Temperature")
 temp.put_att("units","Celsius")
 temp.put_att("coordinates", "time lat lon z")
+temp.put_att("missing_value",-999.9,"sfloat")
 
 humi = file.def_var("humidity","sfloat",[z_dim])
 humi.put_att("long_name","Humidity")
 humi.put_att("standard_name","specific_humidity")
 humi.put_att("units","Percent")
 humi.put_att("coordinates", "time lat lon z")
+humi.put_att("missing_value",-999.9,"sfloat")
 
 # Stop the definitions, lets write some data
 file.enddef

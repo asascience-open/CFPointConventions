@@ -19,16 +19,19 @@ variables:
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
-	double temperature(obs) ;
+		time:missing_value = -999 ;
+	float temperature(obs) ;
 		temperature:long_name = "Water Temperature" ;
 		temperature:standard_name = "sea_water_temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon alt" ;
-	double humidity(obs) ;
+		temperature:missing_value = -999.9f ;
+	float humidity(obs) ;
 		humidity:long_name = "Humidity" ;
 		humidity:standard_name = "specific_humidity" ;
 		humidity:units = "Percent" ;
 		humidity:coordinates = "time lat lon alt" ;
+		humidity:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;

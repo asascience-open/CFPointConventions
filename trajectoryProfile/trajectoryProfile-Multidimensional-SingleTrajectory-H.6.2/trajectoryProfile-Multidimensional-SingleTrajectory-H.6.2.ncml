@@ -25,6 +25,7 @@
     <attribute name="units" value="m" />
     <attribute name="positive" value="down" />
     <attribute name="axis" value="Z" />
+    <attribute name="missing_value" type="float" value="-999." />
   </variable>
   <variable name="time" shape="profile" type="int">
     <attribute name="long_name" value="time" />

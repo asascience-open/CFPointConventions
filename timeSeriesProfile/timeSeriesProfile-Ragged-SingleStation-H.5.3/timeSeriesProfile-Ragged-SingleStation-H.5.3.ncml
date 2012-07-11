@@ -29,22 +29,24 @@
     <attribute name="long_name" value="time" />
     <attribute name="standard_name" value="time" />
     <attribute name="units" value="seconds since 1990-01-01 00:00:00" />
+    <attribute name="missing_value" type="int" value="-999" />
   </variable>
   <variable name="row_size" shape="profile" type="int">
     <attribute name="long_name" value="number of obs in this profile" />
     <attribute name="sample_dimension" value="obs" />
   </variable>
-  <variable name="height" shape="obs" type="double">
+  <variable name="height" shape="obs" type="float">
     <attribute name="long_name" value="height above sea surface" />
     <attribute name="standard_name" value="height" />
     <attribute name="units" value="meters" />
     <attribute name="axis" value="Z" />
     <attribute name="positive" value="up" />
   </variable>
-  <variable name="temperature" shape="obs" type="double">
+  <variable name="temperature" shape="obs" type="float">
     <attribute name="standard_name" value="sea_water_temperature" />
     <attribute name="long_name" value="Water Temperature" />
     <attribute name="units" value="Celsius" />
     <attribute name="coordinates" value="time lat lon height" />
+    <attribute name="missing_value" type="float" value="-999.9" />
   </variable>
 </netcdf>

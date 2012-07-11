@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="./trajectory/trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4/trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4.nc">
-  <dimension name="obs" length="221" isUnlimited="true" />
+  <dimension name="obs" length="176" isUnlimited="true" />
   <dimension name="trajectory" length="10" />
   <dimension name="name_strlen" length="50" />
   <attribute name="Conventions" value="CF-1.6" />
@@ -30,6 +30,7 @@
     <attribute name="long_name" value="time of measurement" />
     <attribute name="standard_name" value="time" />
     <attribute name="units" value="seconds since 1990-01-01 00:00:00" />
+    <attribute name="missing_value" type="int" value="-999" />
   </variable>
   <variable name="z" shape="obs" type="float">
     <attribute name="long_name" value="height above mean sea level" />
@@ -37,17 +38,20 @@
     <attribute name="units" value="m" />
     <attribute name="positive" value="up" />
     <attribute name="axis" value="Z" />
+    <attribute name="missing_value" type="float" value="-999.9" />
   </variable>
   <variable name="temperature" shape="obs" type="float">
     <attribute name="long_name" value="Air Temperature" />
     <attribute name="standard_name" value="air_temperature" />
     <attribute name="units" value="Celsius" />
     <attribute name="coordinates" value="time lat lon z" />
+    <attribute name="missing_value" type="float" value="-999.9" />
   </variable>
   <variable name="humidity" shape="obs" type="float">
     <attribute name="long_name" value="Humidity" />
     <attribute name="standard_name" value="specific_humidity" />
     <attribute name="units" value="Percent" />
     <attribute name="coordinates" value="time lat lon z" />
+    <attribute name="missing_value" type="float" value="-999.9" />
   </variable>
 </netcdf>

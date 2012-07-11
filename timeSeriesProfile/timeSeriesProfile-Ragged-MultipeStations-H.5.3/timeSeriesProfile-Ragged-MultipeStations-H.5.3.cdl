@@ -24,6 +24,7 @@ variables:
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
 		time:units = "seconds since 1990-01-01 00:00:00" ;
+		time:missing_value = -999 ;
 	int station_index(profile) ;
 		station_index:long_name = "the station this profile is associated with" ;
 		station_index:instance_dimension = "station" ;
@@ -36,11 +37,12 @@ variables:
 		height:units = "meters" ;
 		height:axis = "Z" ;
 		height:positive = "up" ;
-	double temperature(obs) ;
+	float temperature(obs) ;
 		temperature:standard_name = "sea_water_temperature" ;
 		temperature:long_name = "Water Temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon height" ;
+		temperature:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;

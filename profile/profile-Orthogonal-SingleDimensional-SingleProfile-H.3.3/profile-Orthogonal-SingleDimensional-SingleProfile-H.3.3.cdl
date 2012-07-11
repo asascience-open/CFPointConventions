@@ -26,11 +26,13 @@ variables:
 		temperature:long_name = "Water Temperature" ;
 		temperature:units = "Celsius" ;
 		temperature:coordinates = "time lat lon z" ;
+		temperature:missing_value = -999.9f ;
 	float humidity(z) ;
 		humidity:long_name = "Humidity" ;
 		humidity:standard_name = "specific_humidity" ;
 		humidity:units = "Percent" ;
 		humidity:coordinates = "time lat lon z" ;
+		humidity:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;

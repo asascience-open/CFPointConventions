@@ -52,6 +52,7 @@ alt.put_att("long_name", "height below mean sea level")
 alt.put_att("units","m")
 alt.put_att("positive","down")
 alt.put_att("axis","Z")
+alt.put_att("missing_value",-999,"sfloat")
 
 time = file.def_var("time","int",[profile_dim, trajectory_dim])
 time.put_att("long_name","time")

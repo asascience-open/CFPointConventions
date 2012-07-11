@@ -47,6 +47,7 @@ time = file.def_var("time","int",[profile_dim])
 time.put_att("long_name","time")
 time.put_att("standard_name","time")
 time.put_att("units","seconds since 1990-01-01 00:00:00")
+time.put_att("missing_value",-999,"int")
 
 stationindex = file.def_var("station_index","int",[profile_dim])
 stationindex.put_att("long_name", "the station this profile is associated with")
@@ -63,11 +64,12 @@ height.put_att("units","meters")
 height.put_att("axis","Z")
 height.put_att("positive","up")
 
-temp = file.def_var("temperature","float",[obs_dim])
+temp = file.def_var("temperature","sfloat",[obs_dim])
 temp.put_att("standard_name","sea_water_temperature")
 temp.put_att("long_name","Water Temperature")
 temp.put_att("units","Celsius")
 temp.put_att("coordinates", "time lat lon height")
+temp.put_att("missing_value",-999.9,"sfloat")
 
 # Stop the definitions, lets write some data
 file.enddef
