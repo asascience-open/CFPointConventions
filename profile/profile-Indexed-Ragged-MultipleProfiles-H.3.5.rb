@@ -87,12 +87,12 @@ time.put(NArray.int(p).indgen!*3600)
 #     5:  30 obs
 #     6:  12 obs
 # total: 100 obs
-first =  NArray.int(10).fill!(1).to_a
-second = NArray.int(6).fill!(2).to_a
-third =  NArray.int(2).fill!(3).to_a
-fourth = NArray.int(40).fill!(4).to_a
-fifth =  NArray.int(30).fill!(5).to_a
-sixth =  NArray.int(12).fill!(6).to_a
+first =  NArray.int(10).fill!(0).to_a
+second = NArray.int(6).fill!(1).to_a
+third =  NArray.int(2).fill!(2).to_a
+fourth = NArray.int(40).fill!(3).to_a
+fifth =  NArray.int(30).fill!(4).to_a
+sixth =  NArray.int(12).fill!(5).to_a
 
 parent.put(first + second + third + fourth + fifth + sixth, "start" => [0], "end" => [99])
 
