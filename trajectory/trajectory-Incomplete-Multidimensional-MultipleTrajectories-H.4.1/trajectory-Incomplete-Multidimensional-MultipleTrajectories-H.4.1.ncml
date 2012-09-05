@@ -17,6 +17,7 @@
   </variable>
   <variable name="trajectory_info" shape="trajectory" type="int">
     <attribute name="long_name" value="trajectory info" />
+    <attribute name="missing_value" type="int" value="-999" />
   </variable>
   <variable name="trajectory_name" shape="trajectory name_strlen" type="char">
     <attribute name="cf_role" value="trajectory_id" />

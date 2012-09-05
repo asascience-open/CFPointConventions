@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="./trajectory/trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4/trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4.nc">
-  <dimension name="obs" length="176" isUnlimited="true" />
+  <dimension name="obs" length="173" isUnlimited="true" />
   <dimension name="trajectory" length="10" />
   <dimension name="name_strlen" length="50" />
   <attribute name="Conventions" value="CF-1.6" />
@@ -17,6 +17,7 @@
   </variable>
   <variable name="trajectory_info" shape="trajectory" type="int">
     <attribute name="long_name" value="trajectory info" />
+    <attribute name="missing_value" type="int" value="-999" />
   </variable>
   <variable name="trajectory_name" shape="trajectory name_strlen" type="char">
     <attribute name="cf_role" value="trajectory_id" />

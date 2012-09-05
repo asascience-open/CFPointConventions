@@ -14,6 +14,7 @@ variables:
 		lon:standard_name = "longitude" ;
 	int trajectory_info(trajectory) ;
 		trajectory_info:long_name = "trajectory info" ;
+		trajectory_info:missing_value = -999 ;
 	char trajectory_name(trajectory, name_strlen) ;
 		trajectory_name:cf_role = "trajectory_id" ;
 		trajectory_name:long_name = "trajectory name" ;

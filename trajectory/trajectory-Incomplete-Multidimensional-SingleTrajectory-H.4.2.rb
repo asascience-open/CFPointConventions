@@ -7,6 +7,7 @@ include NumRu
 
 readme = \
 "
+http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html#idp8388800
 "
 
 nc = CFNetCDF.new(__FILE__, readme)
@@ -31,6 +32,7 @@ lon.put_att("standard_name","longitude")
 
 trajectory_info = file.def_var("trajectory_info","int",[])
 trajectory_info.put_att("long_name", "trajectory info")
+trajectory_info.put_att("missing_value",-999,"int")
 
 trajectory_name = file.def_var("trajectory_name","char",[name_dim])
 trajectory_name.put_att("cf_role", "trajectory_id")
@@ -70,6 +72,9 @@ file.enddef
 blank = Array.new(name)
 name1 = [("Trajectory1".split(//).map!{|d|d.ord} + blank)[0..name-1]]
 trajectory_name.put([name1])
+
+# Fill the trajectory_info variable with increasing integers
+trajectory_info.put(0)
 
 lat.put(NArray.float(tm).random!(45))
 lon.put(NArray.float(tm).random!(-76))

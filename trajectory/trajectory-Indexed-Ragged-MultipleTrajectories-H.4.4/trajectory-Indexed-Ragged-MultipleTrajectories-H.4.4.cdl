@@ -1,6 +1,6 @@
 netcdf trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4 {
 dimensions:
-	obs = UNLIMITED ; // (176 currently)
+	obs = UNLIMITED ; // (173 currently)
 	trajectory = 10 ;
 	name_strlen = 50 ;
 variables:
@@ -14,6 +14,7 @@ variables:
 		lon:standard_name = "longitude" ;
 	int trajectory_info(trajectory) ;
 		trajectory_info:long_name = "trajectory info" ;
+		trajectory_info:missing_value = -999 ;
 	char trajectory_name(trajectory, name_strlen) ;
 		trajectory_name:cf_role = "trajectory_id" ;
 		trajectory_name:long_name = "trajectory name" ;
