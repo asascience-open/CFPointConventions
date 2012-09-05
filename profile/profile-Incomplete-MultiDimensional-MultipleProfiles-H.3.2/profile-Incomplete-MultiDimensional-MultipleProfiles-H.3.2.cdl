@@ -36,6 +36,12 @@ variables:
 		humidity:units = "Percent" ;
 		humidity:coordinates = "time lat lon alt" ;
 		humidity:missing_value = -999.9f ;
+	float wind_speed(profile, alt) ;
+		wind_speed:long_name = "Wind Speed" ;
+		wind_speed:standard_name = "wind_speed" ;
+		wind_speed:units = "m/s" ;
+		wind_speed:coordinates = "time lat lon alt" ;
+		wind_speed:missing_value = -999.9f ;
 
 // global attributes:
 		:Conventions = "CF-1.6" ;
