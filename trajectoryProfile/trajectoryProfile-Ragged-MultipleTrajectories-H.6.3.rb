@@ -96,20 +96,16 @@ trajectory.put(NArray.int(t).indgen!)
     sizes << os
 
     # Indexes
-    trajectory_index.put(NArray.int(ppj).fill!(traj), "start" => [ps_so_far], "end" => [ps_so_far + ppj - 1])
-    rowsize.put(NArray.int(ppj).fill!(os), "start" => [ps_so_far], "end" => [ps_so_far + ppj - 1])
-
+    trajectory_index.put([traj], "start" => [ps_so_far + prof], "end" => [ps_so_far + prof])
+    rowsize.put(os, "start" => [ps_so_far + prof], "end" => [ps_so_far + prof])
+    timedata = random.rand(0..50)
+    multdata = 3600
+    time.put(timedata * multdata, "start" => [ps_so_far + prof], "end" => [ps_so_far + prof])
     # Lat/lon
-    lat.put(NArray.int(ppj).random!(50), "start" => [ps_so_far], "end" => [ps_so_far + ppj - 1])
-    lon.put(NArray.int(ppj).random!(-76), "start" => [ps_so_far], "end" => [ps_so_far + ppj - 1])
-
-    # Time
-    timedata = NArray.int(ppj).random!(50)
-    multdata = NArray.int(ppj).fill!(3600)
-    time.put(timedata * multdata, "start" => [ps_so_far], "end" => [ps_so_far + ppj - 1])
+    lat.put(random.rand(40..60), "start" => [ps_so_far + prof], "end" => [ps_so_far + prof])
+    lon.put(random.rand(-76..-40), "start" => [ps_so_far + prof], "end" => [ps_so_far + prof])
 
     # Data vars (obs)
-    
     alt.put(NArray.float(os).indgen!, "start" => [obs_so_far], "end" => [obs_so_far + os - 1])
     temp.put(NArray.float(os).random!(40), "start" => [obs_so_far], "end" => [obs_so_far + os - 1])
     humi.put(NArray.float(os).random!(80), "start" => [obs_so_far], "end" => [obs_so_far + os - 1])

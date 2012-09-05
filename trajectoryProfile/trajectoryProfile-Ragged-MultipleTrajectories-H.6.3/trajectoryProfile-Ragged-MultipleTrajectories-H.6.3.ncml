@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="./trajectoryProfile/trajectoryProfile-Ragged-MultipleTrajectories-H.6.3/trajectoryProfile-Ragged-MultipleTrajectories-H.6.3.nc">
-  <dimension name="obs" length="641" isUnlimited="true" />
+  <dimension name="obs" length="604" isUnlimited="true" />
   <dimension name="profile" length="20" />
   <dimension name="trajectory" length="5" />
   <attribute name="Conventions" value="CF-1.6" />
