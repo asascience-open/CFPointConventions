@@ -21,7 +21,7 @@ variables:
 		alt:units = "m" ;
 		alt:positive = "down" ;
 		alt:axis = "Z" ;
-		alt:missing_value = -999.f ;
+		alt:missing_value = -999.9f ;
 	int time(profile) ;
 		time:long_name = "time" ;
 		time:standard_name = "time" ;
