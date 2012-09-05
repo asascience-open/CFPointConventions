@@ -1,6 +1,6 @@
 netcdf trajectory-Indexed-Ragged-MultipleTrajectories-H.4.4 {
 dimensions:
-	obs = UNLIMITED ; // (173 currently)
+	obs = UNLIMITED ; // (213 currently)
 	trajectory = 10 ;
 	name_strlen = 50 ;
 variables:
