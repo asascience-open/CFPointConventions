@@ -1,0 +1,9 @@
+** timeSeries-MultiDimensional-SingleStation-H.2.3 **
+    
+    
+http://cf-pcmdi.llnl.gov/documents/cf-conventions/1.6/cf-conventions.html#idp8320208
+
+When the intention of a data variable is to contain only a single time series, the preferred
+encoding is a special case of the multidimensional array representation.
+
+    
